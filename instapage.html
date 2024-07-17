@@ -6,118 +6,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
     <style>
-        .cont{
-             border: 2px solid black;
-             position: absolute;
-             margin-left: 600px;
-             margin-top: 250px;
-             padding-top: 10px;
-            padding-bottom: 10px;
-            
-             
-      }
-      .a{
-        margin: 4px 4px;
-        padding: 4px 4px;
-    
-        
-      }
-      .b{
-           
-           margin: 4px 4px;
-           padding: 4px 4px ;
-           width: 250px;
-      }
-      .c{
-          margin-left: 16px;
-          
-        }
-        .d{
-          width: 260px;
-          height: 25px;
-          background-color:#528edc;
-          border: none;
-          color: white;
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          border-radius: 4px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.login-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+    width: 350px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #262626;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background: #fafafa;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0095f6;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #007bb5;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #8e8e8e;
+    font-size: 0.9em;
+}
+
+.fb-login {
+    background: none;
+    border: none;
+    color: #385185;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fb-login i {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    font-size: 0.9em;
+    color: #00376b;
+    text-decoration: none;
+}
+
+.signup-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    width: 350px;
+    border-radius: 8px;
+}
+
+.signup-box p {
+    font-size: 0.9em;
+}
+
+.signup-box a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-box a:hover {
+    text-decoration: underline;
+}
 
 
-      }
-      .img{
-        margin-left: 60px;
-      }
-
-      .new{
-        border: 2px solid black;
-        display: inline;
-        position: absolute;
-        margin-left: 600px;
-        margin-top: 499px;
-        width: 290px;
-        height: 30px;
-      }
-      .sign{
-             margin: 5px 20px ;
-             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      }
-      .pass{
-             margin-left: 90px;
-             text-decoration: none;
-             color: black;
-             
-      }
-      hr a{
-           text-decoration: none;
-      }
-      .sign a{
-              text-decoration: none;
-      }
-      .d:hover{
-                 cursor: pointer;
-      }
     </style>
-    <script>
-
-     function verifypassword(){
-        var pwd=document.getElementById("password").value;
-        if(pwd=="")
-        {
-          document.getElementById("message").innerHTML="please fill the passworrd"
-        }
-        if(pwd.length<8)
-        {
-          document.getElementById("message").innerHTML="Password length must be atleast 8 character"
-        }
-
-
-
-     }
-      
-         
-    </script>
 </head>
 <body>
-    <form action="post" onsubmit="return verifypassword()">
-        <div class="cont">
-        <img src="7a252de00b20.png"class="img">
-        <div class="a">
-            <input type="value" placeholder="username" class="b">
+    <form action="post">
+      <div class="container">
+        <div class="login-box">
+            <h1 class="logo">Instagram</h1>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Phone number, username, or email">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Log In</button>
+                </div>
+                <div class="divider">
+                    <hr class="line">
+                    <span>OR</span>
+                    <hr class="line">
+                </div>
+                <div class="form-group">
+                    <button class="fb-login"><i class="fab fa-facebook-square"></i> Log in with Facebook</button>
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+            </form>
         </div>
-       
-        <div class="a" >
-            <input type="value" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="b" id="password" value=""><span id="message"style="color-red"></span><br><br>
-        </div>
-        <div class="c">
-            <button class="d">Log In</button> 
-        </div>
-        <div>
-            <hr><a href="" class="pass">Forget Password</a>
-             
+        <div class="signup-box">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
         </div>
     </div>
     </form>
-    <div class="new">
-       <p class="sign"> Dont have an account?<a href="">Sign up</a></p>
-    </div>
 </body>
 </html>
