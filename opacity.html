@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(54, 54, 219);
+            border:  2px solid black;
+            text-align: justify;
+            text-shadow: 2px 2px 8px blueviolet;
+            font-size: 15px;
+            overflow: hidden;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            transition: all 0.8s;
+        }
+        img:hover{
+            opacity: 0.5;
+        }
+
+        .inner{
+            height: 200px;
+            width: 200px;
+        }
+        inner :nth-child(1){
+            background-color: brown;
+            top: 0px;
+        }
+        inner :nth-child(2){
+            background-color: brown;
+            right: 0px;
+        }
+        inner :nth-child(3){
+            background-color: brown;
+            left: 0px;
+        }
+        inner :nth-child(4){
+            background-color: brown;
+            bottom: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <img src="pubg.avif" alt=""> -->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptatibus debitis veritatis porro magni sed non iure voluptas sapiente obcaecati ab dicta, dolore neque ea ratione perferendis officiis eius. Quod culpa officiis at recusandae reiciendis necessitatibus nesciunt expedita rem eligendi quibusdam error repudiandae eos, doloribus inventore suscipit ratione? Ratione, officiis.</p>
+    </div>
+</body>
+</html>
